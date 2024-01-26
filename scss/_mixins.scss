@@ -1,0 +1,31 @@
+// mixins
+@mixin borders($style,$color,$radius,$width){
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
+    border-width: $width;
+}
+
+.box-home{
+    @include borders(solid,$mainColor,4px,2px);
+}
+
+.container-main{
+    width: 100vw;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-gradient{
+    @extend .container-main;
+    background-image: linear-gradient(to top, gray, white);
+}
+
+.bg-main{
+    background-color: map-get($map: $esquema, $key:'siete' );
+}
+
+.bg-bucle{
+    background-image: map-get($map: $esquema, $key:'trece' );
+}

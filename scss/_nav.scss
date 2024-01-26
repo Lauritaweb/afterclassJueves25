@@ -1,0 +1,20 @@
+// nesting --- anidación
+.botonera{
+    img{
+        width:120px
+    }
+    li{
+        a{
+            color:$mainColor;
+            &:hove{
+                color:$secondaryColor;
+            }
+        }
+    }
+}
+
+
+
+
+
+
